@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap');
+
+/* Reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+  transition: .2s linear;
+
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Tổng quan đến chi tiết
+*/
+
+/* 
+1. Vị trí
+2. Kích thước (witdh & height)
+3. Màu sắc
+4. Kiểu dáng (Kiểu chữ, hình dáng,...)
+*/
+
+/* Common dung chung */
+
+p {
+  font-weight: 200 !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+
+.mt-16 {
+  margin-top: 16px !important;
+}
+
+.clear {
+  clear: both;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+
+.col-two {
+  width: 50%;
+}
+
+.col-third {
+  width: 33.333%;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background-color: #333;
+
+  text-decoration: none;
+
+  margin-top: 15px;
+  padding: 10px 16px;
+  border: none;
+
+}
+
+.pull-right {
+  float: right !important;
+}
+
+
+/* CSS Style */
+
+#main {
+}
+
+#header {
+  height: 46px;
+  background-color: #333;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1;
+}
+
+#header .logo-icon {
+  width: 140px;
+  margin-right: 50px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  float: left;
+}
+
+#header .search-button {
+  color: #fff;
+  float: right;
+  padding: 0 21px;
+
+}
+
+#header .search-button:hover {
+  display: block;
+  background-color: #333;
+  text-shadow: 0 0 10px #fff;
+  
+  padding: 0 21px;
+  cursor: pointer;
+}
+
+#header .search-button:hover .search-box-background {
+  display: block;
+
+}
+
+#header .search-box {
+  line-height: 25px;
+  display: none;
+
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  min-height: 20px;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+.search-box > p {
+  text-align: center;
+  color: #fff;
+  font-size: small;
+
+}
+
+#header .search-icon {
+  /* color: #fff; */
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 46px;
+}
+
+/* nav CSS */
+
+#nav {
+  display: inline-flex;
+}
+
+#nav, .subnav {
+  list-style-type: none;
+}
+#nav .nav-arrow-down {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#nav a:hover .ti-arrow-circle-down {
+	display: none;
+}
+
+#nav .ti-arrow-circle-up {
+	display:none;
+}
+
+#nav a:hover .ti-arrow-circle-up {
+	display:inline-flex;
+}
+
+#nav li {
+  display: inline-flex;
+  position: relative;
+  font-weight: 500;
+}
+#nav > li > a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#nav li a {
+  text-decoration: none;
+  line-height: 46px;
+  padding: 0 24px;
+
+  align-items: center;
+  justify-items: center;
+}
+
+/* Hover Button navigation bar */
+#nav li:hover .subnav {
+  display: block;
+}
+
+#nav .subnav {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255);
+  top: 100%;
+  min-width: 160px;
+  box-shadow: 0 0 10px #333;
+}
+
+#nav .subnav a {
+  color: rgb(87, 116, 94);
+
+  padding: 0 12px;
+  line-height: 38px;
+}
+
+#nav .subnav li:hover a {
+  color: #fff;
+  background: #333;
+}
+#nav li:hover > a {
+  background-color: #333;
+  display: block;
+  cursor: pointer;
+}
+
+.subnav li {
+  width: 100%;
+}
+
+#slider {
+  margin-top: 46px;
+  padding-top: 50%;
+  /* background: url('./assets/image') top center / cover no-repeat; */
+  background: url(/w3_banding/assets/img/slider/banner.jpeg) top center / cover no-repeat;
+
+  /* image position */
+  position: relative;
+}
+
+#slider .text-content {
+  position: absolute;
+  bottom: 47px;
+  /* left: 50%;
+  transform: translateX(-50%); */
+
+  /* Cách khác sử dụng để canh giữa */
+
+  width: 100%;
+
+  text-align: center;
+
+  color: #fff;
+  text-shadow: 0 0 10px #333;
+
+}
+
+#slider .text-heading {
+  font-weight: 700;
+  font-size: 24px;
+
+}
+
+#slider .text-description {
+  font-size: 15px;
+  margin-top: 25px;
+
+}
+
+/* Phần content */
+
+#content {
+  width: 100%;
+}
+
+#content .member-list {
+  margin-top: 48px;
+}
+
+#content .member-name {
+  font-size: 15px;
+ 
+}
+
+#content .member-img:hover {
+  cursor: pointer;
+}
+
+#content .member-img {
+  width: 80%;
+  margin-top: 15px;
+
+  border-radius: 5px;
+
+}
+
+#content .content-section {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 48px 112px;
+
+}
+
+#content .section-heading:hover {
+  color: rgb(87, 116, 94) ;
+}
+
+#content .section-heading {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+
+  letter-spacing: 4px;
+
+}
+
+#content .section-sub-heading:hover {
+  color: rgb(87, 116, 94);
+}
+
+#content .section-sub-heading {
+  font-size: 15px;
+  text-align: center;
+  font-style: italic;
+
+  margin-top: 25px;
+  margin-bottom: 32px;
+
+  opacity: .7;
+}
+
+#content .about-section:hover {
+  color:rgb(87, 116, 94)
+}
+
+#content .about-section {
+  margin-top: 25px;
+  font-size: 15px;
+
+  text-align: center;
+  line-height: 1.6; /* dùng cho tiếng việt thì 1.6, tiếng anh là 1.4 */
+}
+
+/* Jobs Section */
+.job-section {
+  background-color:rgb(87, 116, 94)
+}
+.jobs-lists {
+  background-color: white;
+  list-style: none;
+  margin-top: 40px;
+}
+
+.jobs-lists li {
+  color: #333;
+  font-size: 15px;
+
+  padding: 11px 16px;
+  border-bottom: 1px solid rgb(121, 121, 121);
+}
+
+.jobs-lists .Check-in {
+  color: #fff;
+  background-color: #f44336;
+  padding: 4px 4px;
+  margin-left: 16px;
+  border-radius: 5px;
+}
+
+.jobs-lists .Contact-us {
+  float: right;
+  width: 24px;
+  height: 24px;
+  background-color: rgb(87, 116, 94);
+  color: #fff;
+
+  border-radius: 50px;
+  text-align: center;
+  line-height: 24px;
+
+  margin-top: -3px;
+
+}
+
+/* Places Jobs */
+.places-list {
+  margin-top: 32px;
+}
+
+
+.place-img:hover {
+  opacity: .6;
+  
+}
+
+.place-img {
+  width: 100%;
+  /* height: 190px; */
+  display: block;
+}
+
+.place-body {
+  font-size: 15px;
+  background-color: #fff;
+  padding: 16px;
+}
+
+.place-heading {
+  font-size: 15px;
+}
+
+.details-heading {
+  font-size: 14px;
+  margin-top: 15px;
+  color: rgb(75, 75, 75);
+  line-height: 1.6;
+
+}
+
+.details-desc {
+  margin-top: 15px;
+  line-height: 1.4;
+}
+
+
+
+/* CONTACT FORM */'
+.contact-content {
+  margin-top: 48px;
+}
+
+.contact-info {
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 1.6;
+
+}
+
+.contact-info i[class*="ti-"] {
+ 
+  width: 30px;
+  display:inline-flex
+}
+
+.contact-form {
+  font-size: 15px;
+}
+
+.contact-form .form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contact-form .form-submit-btn {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  float: right;
+}
+
+/* Map Section */
+.map-section img{
+  width: 100%;
+}
+
+
+/* Footer CSS */
+#footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+#footer .social-icon {
+  font-size: 16px;
+  padding: 15px 0;
+}
+
+#footer a {
+  color: rgb(87, 116, 94);
+  text-decoration: none;
+}
+#footer a:hover,
+#footer .social-icon:hover {
+  color: #333;
+}
+
+/* Modal CSS */
+
+.modal {
+  background-color: rgba(0, 0, 0 , 0.3);
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.open {
+  display: flex;
+}
+
+.close {
+  display: none;
+}
+
+.modal .modal--container {
+  background: #fff;
+  width: 600px;
+  min-height: 200px;
+
+  max-width: calc(100% - 64px);
+
+  position: relative;
+
+  box-shadow: 0 0 15px #fff;
+  animation: modalFadein ease .5s;
+}
+
+.modal .modal--header {
+  color: #fff;
+  background-color: rgb(87, 116, 94);
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+}
+
+.modal .modal--header .modal-header-icon {
+  margin-right: 10px;
+}
+
+.modal .modal--close:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.modal .modal--close {
+  opacity: .8;
+  color: #fff;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 12px;
+}
+
+.modal .modal--body {
+  padding: 16px;
+}
+
+#selection--dropdown {
+  font-size: 15px;
+  border: 1px solid #ccc;
+  width: 100%;
+
+  padding: 10px;
+  margin-bottom: 24px;
+
+  cursor: pointer;
+}
+
+.modal--label {
+  margin-bottom: 8px;
+  display: block;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.modal--input {
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+
+  padding: 10px;
+  margin-bottom: 24px;
+}
+
+.modal--footer {
+  font-size: 15px;
+  text-align: right;
+  padding: 16px;
+  margin-top: ;
+}
+
+.modal--footer a {
+  color: rgb(87, 116, 94);
+
+}
+
+#contact--btn:hover {
+  cursor: pointer;
+  background-color: rgb(74, 99, 80);
+  
+}
+
+#contact--btn {
+  color: #fff;
+  padding: 10px;
+  background-color: rgb(87, 116, 94);
+  border: none;
+
+  width: 100%;
+  font-size: 15px
+
+}
+
+@keyframes modalFadein {
+  from {
+    opacity: 0;
+    transform: translateY(-60px)
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px)
+
+  }
+}
