@@ -113,6 +113,7 @@ p {
 /* CSS Style */
 
 #main {
+  
 }
 
 #header {
@@ -460,7 +461,7 @@ p {
 
 
 
-/* CONTACT FORM */'
+/* CONTACT FORM */
 .contact-content {
   margin-top: 48px;
 }
@@ -627,7 +628,6 @@ p {
   font-size: 15px;
   text-align: right;
   padding: 16px;
-  margin-top: ;
 }
 
 .modal--footer a {
@@ -662,4 +662,19 @@ p {
     transform: translateY(0px)
 
   }
+}
+
+/* Mobile: widht < 740px */
+@media only screen and (max-width: 46.1875em) {
+
+}
+
+/* Tablet: width >= 740px and width < 1024px  */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  
+}
+
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64em) {
+
 }
