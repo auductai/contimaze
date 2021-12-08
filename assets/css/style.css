@@ -221,6 +221,7 @@ p {
 }
 
 #nav li a {
+  width: 100%;
   text-decoration: none;
   line-height: 46px;
   padding: 0 24px;
@@ -251,11 +252,12 @@ p {
 }
 
 #nav .subnav li:hover a {
+  width: 100%;
   color: #fff;
   background: #333;
 }
 #nav li:hover > a {
-  background-color: #333;
+  background-color: rgb(87, 116, 94);
   display: block;
   cursor: pointer;
 }
